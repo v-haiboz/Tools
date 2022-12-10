@@ -1,0 +1,2 @@
+﻿blobStorageConnectionString: DefaultEndpointsProtocol=https;AccountName=cninsedmiotblob001d;AccountKey=AiTTPH3tiLYh09CeQJCRZreTiQXz5KnLT0LVkeR6/WUqEnrWjzhEHJsT/lgwNtctun/dvy9FD2faaJHQXUrgEg==;EndpointSuffix=core.chinacloudapi.cn
+blobContainerName: eventhub-test

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\COLAB.IOT.Tools.Common\EOLAB.IOT.Tools.Common.csproj" />
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Entity\ECOLAB.IOT.Tools.Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="EventHubReceiver\eventhubconfig.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="EventHubReceiver\storageconfig.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

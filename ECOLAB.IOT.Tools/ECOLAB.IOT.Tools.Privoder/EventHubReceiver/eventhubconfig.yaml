@@ -1,0 +1,3 @@
+﻿connectionString: Endpoint=sb://cn-ins-eventhubnamespcae-002-d.servicebus.chinacloudapi.cn/;SharedAccessKeyName=ListenPolicy;SharedAccessKey=Q7CuTvdNK4BSl+D2U5CRKARSKtwJ7eB/VMmt4jZ+Gd8=
+eventHubName: oip_integration_mds_test
+consumerGroup: test

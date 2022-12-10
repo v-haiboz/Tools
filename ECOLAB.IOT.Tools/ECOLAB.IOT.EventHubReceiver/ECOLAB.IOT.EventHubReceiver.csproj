@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Messaging.EventHubs" Version="5.7.5" />
+    <PackageReference Include="Azure.Messaging.EventHubs.Processor" Version="5.7.5" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Service\ECOLAB.IOT.Tools.Service.csproj" />
+  </ItemGroup>
+
+</Project>
