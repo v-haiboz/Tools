@@ -10,7 +10,7 @@
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    internal class EventHubListener:BaseProcessor
+    internal class EventHubListenProcessor:BaseProcessor
     {
         private static ECOLABIOTToolConfigService eCOLABIOTToolConfigService = new ECOLABIOTToolConfigService();
         private static StorageConfig storageConfig = eCOLABIOTToolConfigService.GetReceiverStorageConfig();
@@ -21,7 +21,7 @@
         string consumerGroup;
         Action<ECOLABStreamContent> sendAction;
 
-        public EventHubListener(string connectionString, string eventHubName, string consumerGroup, Action<ECOLABStreamContent> sendAction)
+        public EventHubListenProcessor(string connectionString, string eventHubName, string consumerGroup, Action<ECOLABStreamContent> sendAction)
         {
             this.connectionString = connectionString;
             this.eventHubName = eventHubName;

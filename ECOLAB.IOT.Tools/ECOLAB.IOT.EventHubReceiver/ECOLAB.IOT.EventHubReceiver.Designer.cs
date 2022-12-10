@@ -38,13 +38,17 @@
             this.label_ConsumerGroup = new System.Windows.Forms.Label();
             this.label_EventHubName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel_ReceiveHeader = new System.Windows.Forms.Panel();
+            this.label_Header_Line = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label_Header_LineContent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel_ReceiveHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -145,6 +149,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel_ReceiveHeader);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -153,6 +158,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "接收区：";
+            // 
+            // panel_ReceiveHeader
+            // 
+            this.panel_ReceiveHeader.Controls.Add(this.label_Header_LineContent);
+            this.panel_ReceiveHeader.Controls.Add(this.label_Header_Line);
+            this.panel_ReceiveHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_ReceiveHeader.Location = new System.Drawing.Point(3, 26);
+            this.panel_ReceiveHeader.Name = "panel_ReceiveHeader";
+            this.panel_ReceiveHeader.Size = new System.Drawing.Size(1090, 53);
+            this.panel_ReceiveHeader.TabIndex = 1;
+            // 
+            // label_Header_Line
+            // 
+            this.label_Header_Line.AutoSize = true;
+            this.label_Header_Line.Location = new System.Drawing.Point(67, 14);
+            this.label_Header_Line.Name = "label_Header_Line";
+            this.label_Header_Line.Size = new System.Drawing.Size(97, 24);
+            this.label_Header_Line.TabIndex = 0;
+            this.label_Header_Line.Text = "Total Line:";
             // 
             // richTextBox1
             // 
@@ -165,6 +189,18 @@
             this.richTextBox1.Size = new System.Drawing.Size(1090, 297);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            // 
+            // label_Header_LineContent
+            // 
+            this.label_Header_LineContent.BackColor = System.Drawing.SystemColors.Control;
+            this.label_Header_LineContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Header_LineContent.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Header_LineContent.Location = new System.Drawing.Point(170, 8);
+            this.label_Header_LineContent.Name = "label_Header_LineContent";
+            this.label_Header_LineContent.Size = new System.Drawing.Size(165, 39);
+            this.label_Header_LineContent.TabIndex = 0;
+            this.label_Header_LineContent.Text = "0";
+            this.label_Header_LineContent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -182,6 +218,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.panel_ReceiveHeader.ResumeLayout(false);
+            this.panel_ReceiveHeader.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +237,9 @@
         private Label label_EventHubName;
         private GroupBox groupBox1;
         private RichTextBox richTextBox1;
+        private Panel panel_ReceiveHeader;
+        private TextBox textBox_TotalLine;
+        private Label label_Header_Line;
+        private Label label_Header_LineContent;
     }
 }

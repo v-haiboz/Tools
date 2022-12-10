@@ -4,13 +4,11 @@
     using System;
     using System.Collections.Concurrent;
     using System.Text;
-    internal class DataDispatcher: BaseProcessor
+    internal class DispatchProcessor: BaseProcessor
     {
         private ConcurrentQueue<ECOLABStreamContent> dataDispQueue = new ConcurrentQueue<ECOLABStreamContent>();
 
         public delegate void TextBoxAppendDel(Color color, string str);
-        public event TextBoxAppendDel txtReceiveAppend;
-        private static int counter = 0;
         public void Receive(ECOLABStreamContent streamContent)
         {
             if (streamContent != null)
@@ -44,17 +42,7 @@
                     switch (content.Type)
                     {
                         case StreamType.Receive:
-                            if (color == Color.AliceBlue)
-                            {
-                                color = Color.Black;
-                            }
-                            else if (color == Color.Azure)
-                            {
-                                color = Color.DarkRed;
-                            }
-                            counter++;
-                            if (txtReceiveAppend != null)
-                                txtReceiveAppend(color, $"Line:{counter} {content.Content}");
+                             Console.WriteLine($"{content.Content}");
                             break;
                         default:
                             break;

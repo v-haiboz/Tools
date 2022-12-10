@@ -1,9 +1,10 @@
-using ECOLAB.IOT.EventHubReceiver.Extensions;
-using ECOLAB.IOT.Tools.Entity;
-using ECOLAB.IOT.Tools.Service;
-
 namespace ECOLAB.IOT.EventHubReceiver
 {
+    using ECOLAB.IOT.EventHubReceiver.Extensions;
+    using ECOLAB.IOT.Tools.Entity;
+    using ECOLAB.IOT.Tools.Service;
+    using System;
+
     public partial class Form1 : Form
     {
         private static ECOLABIOTToolConfigService eCOLABIOTToolConfigService = new ECOLABIOTToolConfigService();
@@ -12,8 +13,8 @@ namespace ECOLAB.IOT.EventHubReceiver
         float X, Y;
         string from_title;
 
-        private DataDispatcher dataDispatcher;
-        private EventHubListener eventHubListener;
+        private DispatchProcessor dataDispatcher;
+        private EventHubListenProcessor eventHubListener;
         public Form1()
         {
             InitializeComponent();
@@ -68,9 +69,8 @@ namespace ECOLAB.IOT.EventHubReceiver
 
         private void Start()
         {
-            dataDispatcher = new DataDispatcher();
-            dataDispatcher.txtReceiveAppend += OutPut;
-            eventHubListener = new EventHubListener(eventHubConfig.ConnectionString, eventHubConfig.EventHubName, eventHubConfig.ConsumerGroup, (content) => { dataDispatcher.Receive(content); });
+            dataDispatcher = new DispatchProcessor();
+            eventHubListener = new EventHubListenProcessor(richTextBox_ConnectionString.Text, textBox_EventHubName.Text, textBox_ConsumerGroup.Text, (content) => { dataDispatcher.Receive(content); });
             dataDispatcher.Start();
             eventHubListener.Start();
         }
@@ -91,6 +91,13 @@ namespace ECOLAB.IOT.EventHubReceiver
             this.richTextBox_ConnectionString.Text = eventHubConfig.ConnectionString;
             this.textBox_EventHubName.Text= eventHubConfig.EventHubName;
             this.textBox_ConsumerGroup.Text = eventHubConfig.ConsumerGroup;
+            SetOutLog();
+        }
+
+        private void SetOutLog()
+        {
+            RichTextBoxConsole writer = new RichTextBoxConsole(this.richTextBox1,this.label_Header_LineContent);
+            Console.SetOut(writer);
         }
 
         private void setControls(float newx, float newy, Control cons)
