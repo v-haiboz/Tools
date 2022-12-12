@@ -12,6 +12,7 @@ namespace ECOLAB.IOT.EventHubReceiver
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            Thread.CurrentThread.Priority = ThreadPriority.Highest;
         }
     }
 }

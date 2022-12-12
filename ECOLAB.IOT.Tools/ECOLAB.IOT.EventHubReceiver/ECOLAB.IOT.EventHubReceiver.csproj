@@ -18,4 +18,8 @@
     <ProjectReference Include="..\ECOLAB.IOT.Tools.Service\ECOLAB.IOT.Tools.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Help\" />
+  </ItemGroup>
+
 </Project>

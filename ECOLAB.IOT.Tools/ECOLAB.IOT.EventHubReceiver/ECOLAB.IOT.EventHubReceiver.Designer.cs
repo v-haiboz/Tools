@@ -39,9 +39,9 @@
             this.label_EventHubName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel_ReceiveHeader = new System.Windows.Forms.Panel();
+            this.label_Header_LineContent = new System.Windows.Forms.Label();
             this.label_Header_Line = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label_Header_LineContent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -149,8 +149,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel_ReceiveHeader);
             this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.panel_ReceiveHeader);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -169,6 +169,18 @@
             this.panel_ReceiveHeader.Size = new System.Drawing.Size(1090, 53);
             this.panel_ReceiveHeader.TabIndex = 1;
             // 
+            // label_Header_LineContent
+            // 
+            this.label_Header_LineContent.BackColor = System.Drawing.SystemColors.Control;
+            this.label_Header_LineContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Header_LineContent.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Header_LineContent.Location = new System.Drawing.Point(170, 8);
+            this.label_Header_LineContent.Name = "label_Header_LineContent";
+            this.label_Header_LineContent.Size = new System.Drawing.Size(165, 39);
+            this.label_Header_LineContent.TabIndex = 0;
+            this.label_Header_LineContent.Text = "0";
+            this.label_Header_LineContent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label_Header_Line
             // 
             this.label_Header_Line.AutoSize = true;
@@ -183,24 +195,12 @@
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 26);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 79);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(1090, 297);
-            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Size = new System.Drawing.Size(1090, 244);
+            this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            // 
-            // label_Header_LineContent
-            // 
-            this.label_Header_LineContent.BackColor = System.Drawing.SystemColors.Control;
-            this.label_Header_LineContent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_Header_LineContent.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_Header_LineContent.Location = new System.Drawing.Point(170, 8);
-            this.label_Header_LineContent.Name = "label_Header_LineContent";
-            this.label_Header_LineContent.Size = new System.Drawing.Size(165, 39);
-            this.label_Header_LineContent.TabIndex = 0;
-            this.label_Header_LineContent.Text = "0";
-            this.label_Header_LineContent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -209,7 +209,7 @@
             this.ClientSize = new System.Drawing.Size(1096, 604);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
-            this.Text = "ECOLAB.IOT.Receiver";
+            this.Text = "ECOLAB.IOT.EventHubReceiver";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -236,10 +236,10 @@
         private Label label_ConsumerGroup;
         private Label label_EventHubName;
         private GroupBox groupBox1;
-        private RichTextBox richTextBox1;
         private Panel panel_ReceiveHeader;
         private TextBox textBox_TotalLine;
         private Label label_Header_Line;
         private Label label_Header_LineContent;
+        private RichTextBox richTextBox1;
     }
 }
