@@ -11,8 +11,11 @@
 >> 2. 点击开始监听.
 >>> <img src="/img/2.png"/>
 >> 3. 如何有数据会在接收区域输出.
+>>>Note:
+>>>1.应该有可能EventHub数量很大，所以当慢100条数据时，就会清空接受去，重新记录.
+>>>2.Total Line:记录的总的条数(程序每次启动，将重新计数)。
 >>> <img src="/img/4.png"/>
->> 4. 点击停止，将会停止数据的接收
+>> 4. 点击停止，将会停止数据的接收.
 >>> <img src="/img/3.png"/>
 ## High order operation
 >> Logging enabled
