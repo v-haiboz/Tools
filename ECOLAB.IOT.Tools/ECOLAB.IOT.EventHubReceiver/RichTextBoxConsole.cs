@@ -1,6 +1,6 @@
 ﻿namespace ECOLAB.IOT.EventHubReceiver
 {
-    using System.Drawing;
+    using ECOLAB.IOT.Tools.Entity;
     using System.Text;
 
     internal class RichTextBoxConsole : TextWriter
@@ -9,6 +9,7 @@
         Label totalLine = null;
         delegate void VoidAction();
         private static int counter = 0;
+        private static QueueLength<string>  values = new QueueLength<string>(100);
         /// <summary>
         /// Custom TextBox-Class used to print the Console output.
         /// </summary>
@@ -27,38 +28,24 @@
         //<param name="value">Input-string which is appended to the textbox.</param>
         public override void WriteLine(string value)
         {
-            var num = Interlocked.Increment(ref  counter);
             VoidAction action = delegate
             {
                 try
                 {
-                    string[] strLines = output.Text.Split('\n');
-                    if (strLines.Length > 100)
-                    {
-                        output.Clear();
-                    }
                     if (!string.IsNullOrEmpty(value))
                     {
+                        var num = Interlocked.Increment(ref counter);
+                        values.Enqueue(string.Format("\r\n[{0:HH:mm:ss}]{1}{2}\r\n", DateTime.Now, $"Line:{num}", value));
                         output.Focus();
                         output.Select(output.TextLength, 0);
                         output.ScrollToCaret();
-                        output.AppendText(string.Format("\r\n[{0:HH:mm:ss}]{1}{2}\r\n", DateTime.Now, $"Line:{num}" , value));
-                        totalLine.Text = counter.ToString();
-                        if (num % 2 == 0)
-                        {
-                            output.ForeColor = Color.Black;
-                        }
-                        else
-                        {
-                            output.ForeColor = Color.DarkRed;
-                        }
+                        output.Text = string.Join("", values);
+                        totalLine.Text = num.ToString();
                     }
                     else
                     {
                         output.AppendText("empty");
                     }
-
-
                 }
                 catch (Exception ex)
                 {

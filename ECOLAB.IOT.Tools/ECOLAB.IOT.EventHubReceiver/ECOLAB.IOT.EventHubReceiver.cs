@@ -77,8 +77,8 @@ namespace ECOLAB.IOT.EventHubReceiver
 
         private void Stop()
         {
-            dataDispatcher.Stop();
             eventHubListener.Stop();
+            dataDispatcher.Stop();
         }
 
         public void OutPut(Color color, string str)
