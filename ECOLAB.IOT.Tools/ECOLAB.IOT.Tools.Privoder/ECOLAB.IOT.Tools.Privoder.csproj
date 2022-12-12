@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\COLAB.IOT.Tools.Common\EOLAB.IOT.Tools.Common.csproj" />
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Common\ECOLAB.IOT.Tools.Common.csproj" />
     <ProjectReference Include="..\ECOLAB.IOT.Tools.Entity\ECOLAB.IOT.Tools.Entity.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="EventHubSender\eventhubconfig.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="EventHubSender\body.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="EventHubReceiver\eventhubconfig.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

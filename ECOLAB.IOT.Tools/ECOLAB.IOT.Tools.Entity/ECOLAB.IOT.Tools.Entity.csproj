@@ -7,15 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\COLAB.IOT.Tools.Common\EOLAB.IOT.Tools.Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Receiver\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Common\ECOLAB.IOT.Tools.Common.csproj" />
   </ItemGroup>
 
 </Project>

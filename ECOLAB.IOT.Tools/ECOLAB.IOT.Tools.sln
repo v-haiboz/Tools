@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOLAB.IOT.EventHubReceiver", "ECOLAB.IOT.EventHubReceiver\ECOLAB.IOT.EventHubReceiver.csproj", "{756B7B27-9AD4-41C4-8715-99D60A91B2FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.EventHubReceiver", "ECOLAB.IOT.EventHubReceiver\ECOLAB.IOT.EventHubReceiver.csproj", "{756B7B27-9AD4-41C4-8715-99D60A91B2FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOLAB.IOT.Tools.Privoder", "ECOLAB.IOT.Tools.Privoder\ECOLAB.IOT.Tools.Privoder.csproj", "{907121C9-0047-4782-9C87-DD93CA8A0ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.Tools.Privoder", "ECOLAB.IOT.Tools.Privoder\ECOLAB.IOT.Tools.Privoder.csproj", "{907121C9-0047-4782-9C87-DD93CA8A0ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOLAB.IOT.Tools.Entity", "ECOLAB.IOT.Tools.Entity\ECOLAB.IOT.Tools.Entity.csproj", "{192FE828-E941-4751-941C-CC224930C0DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.Tools.Entity", "ECOLAB.IOT.Tools.Entity\ECOLAB.IOT.Tools.Entity.csproj", "{192FE828-E941-4751-941C-CC224930C0DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EOLAB.IOT.Tools.Common", "COLAB.IOT.Tools.Common\EOLAB.IOT.Tools.Common.csproj", "{9E8EB7FB-9324-4B9A-9374-BF891177ED38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.Tools.Service", "ECOLAB.IOT.Tools.Service\ECOLAB.IOT.Tools.Service.csproj", "{8A5C9C77-B269-4999-A0E1-0667AF3C073A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOLAB.IOT.Tools.Service", "ECOLAB.IOT.Tools.Service\ECOLAB.IOT.Tools.Service.csproj", "{8A5C9C77-B269-4999-A0E1-0667AF3C073A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECOLAB.IOT.EventHubSender.Console", "ECOLAB.IOT.EventHubSender.Console\ECOLAB.IOT.EventHubSender.Console.csproj", "{EF64DCD1-06B9-44E1-A6D5-09B2C28EB233}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.EventHubSender", "ECOLAB.IOT.EventHubSender\ECOLAB.IOT.EventHubSender.csproj", "{01777677-9EB3-438F-B4FC-CA16E31EF8E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECOLAB.IOT.Tools.Common", "ECOLAB.IOT.Tools.Common\ECOLAB.IOT.Tools.Common.csproj", "{B97CEB95-B2F7-48FE-AA36-F56797E1752F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +35,22 @@ Global
 		{192FE828-E941-4751-941C-CC224930C0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{192FE828-E941-4751-941C-CC224930C0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{192FE828-E941-4751-941C-CC224930C0DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E8EB7FB-9324-4B9A-9374-BF891177ED38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E8EB7FB-9324-4B9A-9374-BF891177ED38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E8EB7FB-9324-4B9A-9374-BF891177ED38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E8EB7FB-9324-4B9A-9374-BF891177ED38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A5C9C77-B269-4999-A0E1-0667AF3C073A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A5C9C77-B269-4999-A0E1-0667AF3C073A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A5C9C77-B269-4999-A0E1-0667AF3C073A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A5C9C77-B269-4999-A0E1-0667AF3C073A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF64DCD1-06B9-44E1-A6D5-09B2C28EB233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF64DCD1-06B9-44E1-A6D5-09B2C28EB233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF64DCD1-06B9-44E1-A6D5-09B2C28EB233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF64DCD1-06B9-44E1-A6D5-09B2C28EB233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01777677-9EB3-438F-B4FC-CA16E31EF8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01777677-9EB3-438F-B4FC-CA16E31EF8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01777677-9EB3-438F-B4FC-CA16E31EF8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01777677-9EB3-438F-B4FC-CA16E31EF8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97CEB95-B2F7-48FE-AA36-F56797E1752F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97CEB95-B2F7-48FE-AA36-F56797E1752F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97CEB95-B2F7-48FE-AA36-F56797E1752F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97CEB95-B2F7-48FE-AA36-F56797E1752F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

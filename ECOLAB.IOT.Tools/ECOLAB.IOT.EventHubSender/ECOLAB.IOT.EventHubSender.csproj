@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ECOLINK.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ECOLINK.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ECOLINK.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECOLAB.IOT.EventHubSender.Console\ECOLAB.IOT.EventHubSender.Console.csproj" />
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Entity\ECOLAB.IOT.Tools.Entity.csproj" />
+    <ProjectReference Include="..\ECOLAB.IOT.Tools.Service\ECOLAB.IOT.Tools.Service.csproj" />
+  </ItemGroup>
+
+</Project>

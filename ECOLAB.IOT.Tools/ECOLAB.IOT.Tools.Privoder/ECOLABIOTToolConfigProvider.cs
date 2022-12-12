@@ -7,6 +7,10 @@
         public EventHubConfig GetReceiverEventHubConfig();
         public StorageConfig GetReceiverStorageConfig();
 
+        public EventHubConfig GetSenderEventHubConfig();
+
+        public string GetSenderBody();
+
     }
 
     public class ECOLABIOTToolConfigProvider : IECOLABIOTToolConfigProvider
@@ -20,5 +24,16 @@
         {
             return YamlDotNetExtesions.deserializer.Deserialize<StorageConfig>(File.ReadAllText("EventHubReceiver/storageconfig.yaml"));
         }
+
+        public EventHubConfig GetSenderEventHubConfig()
+        {
+            return YamlDotNetExtesions.deserializer.Deserialize<EventHubConfig>(File.ReadAllText("EventHubSender/eventhubconfig.yaml"));
+        }
+
+        public string GetSenderBody()
+        {
+            return File.ReadAllText("EventHubSender/body.json");
+        }
+
     }
 }

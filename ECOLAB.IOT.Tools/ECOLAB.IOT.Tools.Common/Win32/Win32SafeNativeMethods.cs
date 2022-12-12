@@ -1,4 +1,4 @@
-﻿namespace EOLAB.IOT.Tools.Common.Native32Api
+﻿namespace ECOLAB.IOT.Tools.Common.Native32Api
 {
     using System;
     using System.Runtime.InteropServices;

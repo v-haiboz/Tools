@@ -1,0 +1,35 @@
+﻿{
+
+  "A40088": 1,
+
+  "A40090": 638064306887036663,
+
+  "A40096": 622770759,
+
+  "A40098": 1670833888,
+
+  "A40112": 112.2,
+
+  "A40114": 114.4,
+
+  "deviceId": "MDS-MDS221022999",
+
+  "timestampEventRouteReceive": 1670833888,
+
+  "messageType": "CONDOREvents",
+
+  "enqueuedTimeUtc": 1670833888,
+
+  "timestampIoTHubEnqueuedTime": 1670833888,
+
+  "group": "AO",
+
+  "destCloud": "OIP",
+
+  "dateTimeUTC": 1670833888,
+
+  "messageId": "42600ac8-5a96-11ed-a0e2-b659407e1f59",
+
+  "dateTimeLocal": 1670833888
+
+}
