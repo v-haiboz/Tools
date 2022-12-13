@@ -37,7 +37,7 @@
         {
             this.Stop();
             this.ListenerStopEvent.Reset();
-            Console.WriteLine($"=====Advance Pattern Send Start TotalTime:{CallerContext.SendEventOption.TotalTime} ThreadCount:{CallerContext.SendEventOption.ThreadCount} SleepTime:{CallerContext.SendEventOption.SleepTime}=====");
+            Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}=====Advance Pattern Send Start TotalTime:{CallerContext.SendEventOption.TotalTime} ThreadCount:{CallerContext.SendEventOption.ThreadCount} SleepTime:{CallerContext.SendEventOption.SleepTime}=====\r\n");
             var processorCount = CallerContext.SendEventOption.ThreadCount;
             this.processorCollectionLock.EnterWriteLock();
             try
@@ -157,7 +157,7 @@
                         finally
                         {
                             rwLock.ExitUpgradeableReadLock();
-                            Console.WriteLine($"=====Advance Pattern Send Finished =====");
+                            Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}=====Advance Pattern Send Finished =====\r\n");
                             if (completedEvent !=null)
                             {
                                 completedEvent.Invoke(true);

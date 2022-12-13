@@ -29,7 +29,7 @@
         {
             try
             {
-                Console.WriteLine($"=====BatchNO:{batchNo} Send Start.=====");
+                Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}=====BatchNO:{batchNo} Send Start.=====\r\n");
                 for (var c = 1; c <= count; c++)
                 {  ///to do: send to eventhub.
                     using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
@@ -38,7 +38,7 @@
                         if (!eventBatch.TryAdd(new EventData(body)))
                         {
                             // if it is too large for the batch
-                            throw new Exception($".Event {i} is too large for the batch and cannot be sent.");
+                            throw new Exception($"\r\n{DateTime.Now.ToString("HH:mm:ss")} Event {i} is too large for the batch and cannot be sent.\r\n");
                         }
                     }
 
@@ -46,7 +46,7 @@
                     {
                         // Use the producer client to send the batch of events to the event hub
                         await producerClient.SendAsync(eventBatch);
-                        Console.WriteLine($"              BatchNO: {batchNo},Count {c}.");
+                        Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}              BatchNO: {batchNo},Count {c}.\r\n");
                     }
                     catch (Exception ex)
                     {
@@ -55,7 +55,7 @@
 
                 }
 
-                Console.WriteLine($"=====BatchNO:{batchNo} Send Finised.=====");
+                Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}=====BatchNO:{batchNo} Send Finised.=====\r\n");
                 return true;
             }
             catch (Exception ex)

@@ -368,16 +368,17 @@
             // textBox_ConnectionString
             // 
             this.textBox_ConnectionString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_ConnectionString.Location = new System.Drawing.Point(121, 30);
+            this.textBox_ConnectionString.Location = new System.Drawing.Point(121, 6);
             this.textBox_ConnectionString.Multiline = true;
             this.textBox_ConnectionString.Name = "textBox_ConnectionString";
-            this.textBox_ConnectionString.Size = new System.Drawing.Size(943, 33);
+            this.textBox_ConnectionString.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_ConnectionString.Size = new System.Drawing.Size(943, 92);
             this.textBox_ConnectionString.TabIndex = 1;
             // 
             // label_EventhubConn
             // 
             this.label_EventhubConn.AutoSize = true;
-            this.label_EventhubConn.Location = new System.Drawing.Point(15, 32);
+            this.label_EventhubConn.Location = new System.Drawing.Point(8, 35);
             this.label_EventhubConn.Name = "label_EventhubConn";
             this.label_EventhubConn.Size = new System.Drawing.Size(118, 24);
             this.label_EventhubConn.TabIndex = 0;

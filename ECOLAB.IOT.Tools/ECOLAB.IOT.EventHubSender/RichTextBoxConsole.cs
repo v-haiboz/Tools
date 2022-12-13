@@ -34,7 +34,7 @@
                     if (!string.IsNullOrEmpty(value))
                     {
                         var num = Interlocked.Increment(ref counter);
-                        values.Enqueue(string.Format("\r\n[{0:HH:mm:ss}]{1}\r\n", DateTime.Now,  value));
+                        values.Enqueue(value);
                         output.Focus();
                         output.Select(output.TextLength, 0);
                         output.ScrollToCaret();

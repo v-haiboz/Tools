@@ -4,8 +4,5 @@
     <Compile Update="ECOLAB.IOT.EventHubSender.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ECOLAB.IOT.EventHubSender.Modern.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

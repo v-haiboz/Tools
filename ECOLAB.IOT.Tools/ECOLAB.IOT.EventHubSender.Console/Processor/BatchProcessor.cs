@@ -65,7 +65,7 @@
             {
                 var num=Interlocked.Increment(ref count);
                 _ = senderProcessor.Process(ProcessorId).Result;
-                Console.WriteLine($"                  ProcessorId {ProcessorId} ->Count: {num}");
+                Console.WriteLine($"\r\n{DateTime.Now.ToString("HH:mm:ss")}                  ProcessorId {ProcessorId} ->Count: {num}\r\n");
             }
 
             return true;
